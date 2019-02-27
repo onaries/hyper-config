@@ -64,7 +64,7 @@ module.exports = {
     // set to `false` (without backticks and without quotes) if you want to hide the minimize, maximize and close buttons
     // additionally, set to `'left'` if you want them on the left, like in Ubuntu
     // default: `true` (without backticks and without quotes) on Windows and Linux, ignored on macOS
-    showWindowControls: '',
+    showWindowControls: 'left',
 
     // custom padding (CSS format, i.e.: `top right bottom left`)
     padding: '12px 14px',
@@ -103,11 +103,11 @@ module.exports = {
     //
     // PowerShell on Windows
     // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
-    shell: 'cmd.exe',
+    shell: 'C:\\Program Files\\Git\\git-cmd.exe',
 
     // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
     // by default `['--login']` will be used
-    shellArgs: ['/k', 'C:\\cmder\\vendor\\init.bat'],
+    shellArgs: ['--command=usr/bin/bash.exe', '-l', '-i'],
 
     // for environment variables
     env: {'TERM':'cygwin'},
@@ -129,6 +129,7 @@ module.exports = {
     // bellSoundURL: 'http://example.com/bell.mp3',
 
     // for advanced config flags please refer to https://hyper.is/#cfg
+    opacity: 0.96
   },
 
   // a list of plugins to fetch and install from npm
@@ -137,7 +138,16 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ['hyper-statusline', "hyper-named-css-colors", "hyper-launch-menu"],
+  plugins: ['hyper-font-ligatures', 
+    'hyper-systray', 
+    'hyper-snazzy', 
+    'hyper-opacity', 
+    'hyperborder', 
+    'hyperterm-monokai', 
+    'hyper-tab-icons', 
+    'hyper-statusline', 
+    "hyper-named-css-colors", 
+    "hyper-launch-menu"],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
