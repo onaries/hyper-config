@@ -129,7 +129,12 @@ module.exports = {
     // bellSoundURL: 'http://example.com/bell.mp3',
 
     // for advanced config flags please refer to https://hyper.is/#cfg
-    opacity: 0.96
+    opacity: 0.96,
+
+    hyperBorder: {
+	borderWidth: '4px'
+    }
+    
   },
 
   // a list of plugins to fetch and install from npm
@@ -143,10 +148,9 @@ module.exports = {
     'hyper-snazzy', 
     'hyper-opacity', 
     'hyperborder', 
-    'hyperterm-monokai', 
+    'hyper-relaxed', 
     'hyper-tab-icons', 
     'hyper-statusline', 
-    "hyper-named-css-colors", 
     "hyper-launch-menu"],
 
   // in development, you can create a directory under
